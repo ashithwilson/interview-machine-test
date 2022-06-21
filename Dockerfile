@@ -10,9 +10,6 @@ COPY ./bin/docker/configure.sh /configure.sh
 RUN chmod +x /configure.sh
 RUN /configure.sh
 
-COPY ./bin/docker/view-session.sh /view-session.sh
-RUN chmod +x /view-session.sh
-
 RUN service ssh start
 EXPOSE 22
 CMD ["/usr/sbin/sshd","-D"]

@@ -7,4 +7,9 @@ current_docker=$( docker ps | grep ubuntu-ssh | awk '{print $1}' )
 [ -z "$current_docker" ]         \
 || docker kill "$current_docker"
 
-docker run -h machine-test -p 2222:22 -d "$IMAGE"
+
+docker run -d                                                       \
+-h machine-test                                                     \
+-p 2222:22                                                          \
+--mount type=bind,source="$(pwd)"/logs,target=/var/log/machine-test \
+"$IMAGE"

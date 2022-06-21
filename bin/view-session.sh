@@ -1,5 +1,9 @@
 #!/bin/bash
 
-IMAGE=ubuntu-ssh 
 
-docker exec -it "$(docker ps | grep "$IMAGE" | awk '{print $1}' )" bash /view-session.sh
+last_session=$(ls -tr logs| tail -1)
+
+[ -z "$last_session" ]                  \
+&& echo "No sessions found!
+Maybe no ssh session established yet?"  \
+|| tail -f "logs/$last_session"
