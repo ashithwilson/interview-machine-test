@@ -21,11 +21,20 @@ make build
 make start-session
 ```
 
-Now, you will have a port mapping in your terminal. Provide these details as SSH login details to the interviewee.
+Now, you will have a port mapping in your terminal. Provide the ngrok domain name as SSH host and TCP port as SSH Port. The SSH login details are as follows.
+
+```bash
+Username: ubuntu
+Password: cldr@999
+```
+
+Note: The username and password are hardcoded in [dockerfile](Dockerfile#L7)
+
+Ask the interviewee to login with these SSH details. 
 
 ## View live session
 
-Once the interviewee logs in using SSH, you can see live logs using below command.
+Once the interviewee logs in using SSH, you can see live screen of interviewee using below command.
 
 ```sh
 make view-session
