@@ -13,8 +13,7 @@ build:  ## Build docker image
 
 .PHONY: start-session
 start-session:  ## Start the docker image and link ssh to local port 2222 AND creates a ngrok tunnel
-	bin/run-docker.sh \
-	&& ngrok tcp 2222
+	bin/run-docker.sh
 
 .PHONY: view-session
 view-session:  ## View the last/active screen of remote SSH session
