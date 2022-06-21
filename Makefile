@@ -17,6 +17,6 @@ start-session:  ## Start the docker image and link ssh to local port 2222 AND cr
 	&& ngrok tcp 2222
 
 .PHONY: view-session
-view-session:  ## Start the docker image and link ssh to local port 2222 AND creates a ngrok tunnel
+view-session:  ## View the last/active screen of remote SSH session
 	bin/view-session.sh
 
