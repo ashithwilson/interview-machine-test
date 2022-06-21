@@ -2,7 +2,7 @@
 
 IMAGE=ubuntu-ssh
 
-current_docker=$( docker ps | grep ubuntu-ssh | awk '{print $1}' )
+current_docker=$( docker ps | grep "$IMAGE" | awk '{print $1}' )
 
 [ -z "$current_docker" ]         \
 || docker kill "$current_docker"
