@@ -1,4 +1,4 @@
-# Machine test for Interviews
+# Machine test Setup
 
 This project spins up a docker Ubuntu container in your machine to conduct interviews for candidates. 
 
