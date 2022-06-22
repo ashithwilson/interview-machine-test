@@ -9,13 +9,16 @@ default:
 
 .PHONY: build
 build:  ## Build docker image
-	docker build -t ubuntu-ssh .
+	docker build -t ubuntu-ssh:latest .
 
-.PHONY: start-session
-start-session:  ## Start the docker image and link ssh to local port 2222 AND creates a ngrok tunnel
+.PHONY: run
+run:  ## Runs the docker image and link ssh to local port 2222 AND creates a ngrok tunnel
 	bin/run-docker.sh
 
 .PHONY: view-session
 view-session:  ## View the last/active screen of remote SSH session
 	bin/view-session.sh
 
+.PHONY: login
+login:  ## Log in to Docker containter/Docker exec
+	docker exec -it ubuntu-ssh bash
