@@ -13,7 +13,7 @@ COLUMNS=${COLUMNS:-$(tput cols)}
 COLUMNS=${COLUMNS:-80}
 
 # Wrap an interactive shell into "script"
-script -qf "$LOG_DIR$LOG_FILE$SUFFIX.data" --command=/bin/bash
+script -qf "$LOG_DIR$LOG_FILE$SUFFIX.data" --timing="$LOG_DIR$LOG_FILE$SUFFIX.time" --command=/bin/bash
 _shell2_
 
 
