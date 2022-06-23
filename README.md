@@ -9,7 +9,7 @@ The candidates can login to the server using the SSH credentials while you will 
 Project uses docker to run a container for machine tests and ngrok to create a public domain name to access it.
 
 * Install [Docker](https://docs.docker.com/engine/install/)
-* Set [up ngrok](https://ngrok.com/) 
+* Set up [ngrok](https://ngrok.com/) 
 
 ## Start a test
 
