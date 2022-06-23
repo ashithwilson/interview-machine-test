@@ -42,16 +42,10 @@ Host: 0.tcp.in.ngrok.io
 Port: 18744
 ```
 
-To obtail SSH username and password, issue below command.
+To obtain SSH username and password, issue below command.
 
 ```bash
 make generate-ssh-creds
-docker exec -it ubuntu-ssh generate_pw_ubuntu
-
-SSH Details
----
-Username: ubuntu
-Password: **********
 ```
 
 Ask the interviewee to login with these SSH details. 
