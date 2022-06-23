@@ -22,3 +22,7 @@ view-session:  ## View the last/active screen of remote SSH session
 .PHONY: login
 login:  ## Log in to Docker containter/Docker exec
 	docker exec -it ubuntu-ssh bash
+
+.PHONY: generate-ssh-creds
+generate-ssh-creds:  ## Log in to Docker containter/Docker exec
+	docker exec -it ubuntu-ssh generate_pw_ubuntu

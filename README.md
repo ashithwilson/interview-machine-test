@@ -35,21 +35,24 @@ Now, you will have a port mapping in your terminal. Provide the ngrok domain nam
 Forwarding            tcp://0.tcp.in.ngrok.io:18744 -> localhost:2222
 ```
 
-Here, the SSH details are as follows.
+The SSH details are as follows.
 
 ```sh
 Host: 0.tcp.in.ngrok.io
 Port: 18744
 ```
 
-The SSH login details are as follows.
+To obtail SSH username and password, issue below command.
 
 ```bash
-Username: ubuntu
-Password: cldr@999
-```
+make generate-ssh-creds
+docker exec -it ubuntu-ssh generate_pw_ubuntu
 
-Note: The username and password are hardcoded in [dockerfile](Dockerfile#L7)
+SSH Details
+---
+Username: ubuntu
+Password: **********
+```
 
 Ask the interviewee to login with these SSH details. 
 
